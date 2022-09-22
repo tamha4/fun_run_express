@@ -21,13 +21,10 @@
         <a class="nav-link" href="/users">Users</a>
       </li>
     </ul>
-    <h1><%= title %></h1>
 
-    <ul id='runs'>
-      <% runlist.forEach( (run) => { %>
-        <li><%= run.name %> (<%= run.run_type %>)</li>
-      <% } ) %>
-    </ul>
+    <h1> <%= userItem.first_name %> <%= userItem.last_name %> </h1>
+    <strong>Email: </strong> <%= userItem.email %> <br/>
+    <strong>Gender: </strong> <%= userItem.gender %> <br/>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>

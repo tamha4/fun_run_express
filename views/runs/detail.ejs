@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <ul class="nav">
+      <li class="nav-item">
+        <h1>Fun Run</h1>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/runs">Runs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users">Users</a>
+      </li>
+    </ul>
+
+    <h1><%= runItem.name %></h1>
+    <strong>ID: </strong> <%= runItem.id %> <br />
+    <strong>run_type: </strong> <%= runItem.run_type %> <br />
+    <strong>Date: </strong> <%= runItem.date %> <br />
+    <strong>City: </strong> <%= runItem.city %> <br />
+    <strong>State: </strong> <%= runItem.state %> <br />
+    <strong>Website: </strong><a href="<%= runItem.url%>"> <%= runItem.url %></a><br />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

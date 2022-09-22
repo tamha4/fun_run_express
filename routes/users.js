@@ -12,4 +12,18 @@ router.get('/', async (req, res,) => {
   });
 });
 
+
+//Get a single users from the database
+router.get('/:id', async (req, res) => {
+  const requestedId = req.params.id;
+  const user = await User.findOne({
+      where: {id: requestedId}
+  });
+
+  res.render('users/detail', {
+      title: 'User Details',
+      userItem: user
+  });
+});
+
 module.exports = router;

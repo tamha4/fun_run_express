@@ -39,8 +39,8 @@
       </tr>
       <% userlist.map( (user) => { %>
         <tr>
-          <td><%= user.first_name %></td>
-          <td><%= user.last_name %></td>
+          <td><a href='/users/<%= user.id %>'><%= user.first_name %> </a></td>
+          <td><a href='/users/<%= user.id %>'><%= user.last_name %></a></td>
           <td><%= user.email %></td>
           <td><%= user.gender %></td>
         </tr>

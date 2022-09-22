@@ -9,7 +9,19 @@ Run.init({
     },
     run_type: {
         type: DataTypes.STRING
-    }
+    },
+    date: {
+        type: DataTypes.STRING
+    },
+    city: {
+        type: DataTypes.STRING
+    },
+    state: {
+        type: DataTypes.STRING
+    },
+    url: {
+        type: DataTypes.STRING
+    },
 },{
     sequelize,
     modeName: 'runs',
