@@ -24,7 +24,8 @@ Run.init({
     },
 },{
     sequelize,
-    modeName: 'runs',
+    tableName: 'runs',
+    modelName: 'runs',
     timestamps: false
 });
 

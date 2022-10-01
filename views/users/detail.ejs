@@ -26,6 +26,13 @@
     <strong>Email: </strong> <%= userItem.email %> <br/>
     <strong>Gender: </strong> <%= userItem.gender %> <br/>
 
+    <h2>Races:</h2>
+    <ul id="runs">
+      <% userItem.runs.forEach( (lang) => { %>
+        <li><a href='/runs/<%= lang.id %>'><%= lang.name %> (<%= lang.run_type %>)</a></li>
+      <% } ); %>
+    </ul>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>

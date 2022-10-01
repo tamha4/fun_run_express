@@ -18,7 +18,8 @@ User.init({
     }
 },{
     sequelize,
-    modeName: 'users',
+    tableName: 'users',
+    modelName: 'users',
     timestamps: false
 });
 

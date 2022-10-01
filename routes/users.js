@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('models/User');
+const Run = require('models/Run');
+
 
 /* GET home page. */
 router.get('/', async (req, res,) => {
@@ -17,7 +19,8 @@ router.get('/', async (req, res,) => {
 router.get('/:id', async (req, res) => {
   const requestedId = req.params.id;
   const user = await User.findOne({
-      where: {id: requestedId}
+      where: {id: requestedId},
+      include: [{model: Run, as: 'runs'}]
   });
 
   res.render('users/detail', {
